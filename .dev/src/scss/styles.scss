@@ -1,0 +1,415 @@
+// Imports Gerais
+@import "./general/normalize";
+@import "./general/global";
+
+// functions de responsividade e grid
+@import "./structure/functions";
+@import "./structure/mixins";
+@import "./structure/variables";
+
+* {
+	font-family: $fonte;
+}
+.mobile {
+	display: block;
+	@include media(s) {
+		display: none;
+	}
+}
+.desktop {
+	display: none;
+	@include media(s) {
+		display: block;
+	}
+}
+.button {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	color: $branco;
+	background: $roxo;
+	border-radius: 150px;
+	padding: 12px 24px;
+	text-decoration: none;
+	transition: 0.2s all ease-in-out;
+	&:hover {
+		background: lighten($roxo, 10%);
+	}
+	&--form {
+		background: $branco;
+		border: none;
+		color: $roxo;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		&.size {
+			display: inline-block;
+			margin: 0 auto;
+		}
+		&:hover {
+			background: lighten($branco, 25%);
+		}
+	}
+	&--container {
+		text-align: center;
+	}
+}
+
+.header {
+	margin-top: 40px;
+	@include media(s) {
+		margin-top: 24px;
+	}
+	&__container {
+		@include container;
+		background: $cinza;
+		padding: 32px 48px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $cinza;
+		@include l-border;
+		@include media(s) {
+			border: none;
+			background: $branco;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__logo {
+		@include media(s) {
+			padding: 24px;
+			background: $cinza;
+			@include l-border;
+			width: 100%;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+		}
+		img {
+			@include media(s) {
+				width: 80px;
+				height: 17px;
+			}
+		}
+	}
+	&__text {
+		color: $preto;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		@include media(s) {
+			text-align: left;
+			margin: 24px 0px;
+		}
+
+		b {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+}
+.hero {
+	margin: 40px 0px;
+	@include media(s) {
+		margin-top: 8px;
+	}
+	&__container {
+		@include container;
+		display: flex;
+		gap: 40px;
+		@include media(s) {
+			flex-direction: column;
+			overflow: hidden;
+		}
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 60px;
+		line-height: 70px;
+		color: $roxo;
+		margin: 0;
+		@include media(s) {
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
+	&__desc {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 30px;
+		color: $preto;
+		max-width: 67%;
+		margin: 8px 0px 24px;
+		@include media(s) {
+			max-width: 100%;
+		}
+	}
+	&__bold {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 30px;
+		color: $preto;
+		margin-bottom: 8px;
+	}
+	&__smaller {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 20px;
+		color: $preto;
+		margin: 0;
+		@include media(s) {
+			padding-right: 20px;
+		}
+	}
+	&__side {
+		position: relative;
+		@include media(s) {
+		}
+		&:after {
+			content: url("../assets/logo-vizinho.png");
+			position: absolute;
+			bottom: 20px;
+			left: 30px;
+			@include media(s) {
+				display: none;
+			}
+		}
+		img {
+			border-radius: 16px;
+			max-width: 100%;
+			height: auto;
+		}
+		.coin {
+			position: absolute;
+			z-index: 10;
+			&_1 {
+				top: 33px;
+				left: -36px;
+				@include media(s) {
+					img {
+						width: 67px;
+						height: 75px;
+					}
+				}
+			}
+			&_2 {
+				bottom: -26px;
+				right: 89px;
+			}
+			&_3 {
+				bottom: 30px;
+				right: -45px;
+			}
+			&_4 {
+				bottom: -15px;
+				left: 150px;
+				@include media(s) {
+					left: unset;
+					right: -33px;
+					bottom: unset;
+					top: 42px;
+				}
+			}
+
+			&_5 {
+				bottom: 30px;
+				left: -33px;
+			}
+		}
+	}
+}
+.formulario {
+	padding: 0 24px;
+	&__container {
+		@include container;
+		background: $roxo;
+		padding: 40px;
+		@include l-border;
+		@include xl-shadow;
+		position: relative;
+		margin-bottom: -416px;
+		@include media(s) {
+			padding: 32px;
+			margin-top: -345px;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 150%;
+		color: $branco;
+		text-align: center;
+		margin: 0 0 24px;
+	}
+	.form {
+		&__holder {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			margin-bottom: 24px;
+		}
+		&__input {
+			width: calc((1160px - 8px) / 2);
+			border: 1px solid $branco;
+			color: $branco;
+			@include s-border;
+			height: 68px;
+			padding: 0 24px;
+			input,
+			select {
+				width: 100%;
+				background: transparent;
+				height: 100%;
+				border: none;
+				padding: 0px;
+				margin: 0px;
+				outline: none;
+				color: $branco;
+			}
+			input {
+				&::placeholder {
+					color: $branco;
+				}
+			}
+		}
+		&__terms {
+			max-width: 772px;
+			display: flex;
+			margin: 0 auto;
+			gap: 8px;
+			color: $branco;
+			align-items: baseline;
+			margin-bottom: 24px;
+			&--text {
+				margin: 0;
+				text-align: center;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 20px;
+				@include media(s) {
+					text-align: left;
+				}
+				a {
+					color: $branco;
+					transition: 0.2s all ease-in-out;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 20px;
+					&:hover {
+						color: #ff8b22;
+					}
+				}
+			}
+		}
+	}
+}
+.box {
+	background: $degrade;
+	padding: 472px 0 220px;
+	@include media(s) {
+		padding-top: 426px;
+	}
+	&__container {
+		max-width: 952px;
+		margin: 0 auto;
+		text-align: center;
+		@include media(s) {
+			padding: 0 24px;
+		}
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 32px;
+		line-height: 40px;
+		color: $branco;
+		@include media(s) {
+			font-size: 27px;
+			line-height: 33px;
+			margin-bottom: 0px;
+		}
+	}
+	&__desc {
+		font-size: 24px;
+		line-height: 30px;
+		max-width: 760px;
+		margin: 0 auto;
+		margin-bottom: 38px;
+		color: $branco;
+		b {
+			font-weight: 700;
+		}
+	}
+	&__holder {
+		display: flex;
+		gap: 24px;
+		margin-bottom: 27px;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include media(s) {
+			gap: 16px;
+		}
+	}
+	&__card {
+		background: url("../assets/box.png") no-repeat;
+		width: 220px;
+		height: 220px;
+		padding: 40px 24px;
+		&--desc {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 20px;
+			color: $verde;
+			margin: 20 0 0px;
+		}
+	}
+	&__smaller {
+		color: $branco;
+		max-width: 760px;
+		margin: 0 auto;
+	}
+}
+.duvidas {
+	padding: 0 24px;
+	&__container {
+		max-width: 818px;
+		margin: 0 auto;
+		margin-top: -155px;
+		padding: 56px 40px;
+		background: $roxo;
+		color: $branco;
+		text-align: center;
+		@include l-border;
+		@include xl-shadow;
+		@include media(s) {
+			padding: 48px 40px;
+		}
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 150%;
+		margin: 0 0 16px;
+	}
+	&__desc {
+		margin: 0 0 24px;
+		@include media(s) {
+			font-size: 14px;
+			b {
+				display: block;
+				margin-bottom: -8px;
+			}
+		}
+	}
+}
+.footer {
+	margin-top: 48px;
+	display: flex;
+	justify-content: center;
+	gap: 28px;
+	padding-bottom: 40px;
+}

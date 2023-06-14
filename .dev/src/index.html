@@ -1,0 +1,113 @@
+<include src="./html/header.html"></include>
+
+<body class="page--home">
+	<include src="./html/nav.html"></include>
+
+	<main>
+		<section class="hero">
+			<div class="hero__container">
+				<div class="hero__content">
+					<h1 class="hero__title">Agora é a sua vez de ganhar dinheiro</h1>
+					<p class="hero__desc">ao ter como vizinho aquele amigo ou amiga que merece morar com qualidade de vida, assim como você.</p>
+					<div class="hero__side desktop">
+						<img src="./assets/hero.png" alt="" />
+						<span class="coin coin_1"><img src="./assets/coin-1.png" alt="" /></span>
+						<span class="coin coin_2 mobile"><img src="./assets/coin-2.png" alt="" /></span>
+						<span class="coin coin_3 mobile"><img src="./assets/coin-3.png" alt="" /></span>
+						<span class="coin coin_4"><img src="./assets/coin-4.png" alt="" /></span>
+						<span class="coin coin_5 mobile"><img src="./assets/coin-5.png" alt="" /></span>
+					</div>
+					<p class="hero__bold">INDIQUE UM AMIGO</p>
+					<p class="hero__smaller">A cada um que fechar negócio você ganha um SUPER PRÊMIO! 🤑</p>
+				</div>
+				<div class="hero__side mobile">
+					<img src="./assets/hero.png" alt="" />
+					<span class="coin coin_1"><img src="./assets/coin-1.png" alt="" /></span>
+					<span class="coin coin_2 mobile"><img src="./assets/coin-2.png" alt="" /></span>
+					<span class="coin coin_3 mobile"><img src="./assets/coin-3.png" alt="" /></span>
+					<span class="coin coin_4"><img src="./assets/coin-4.png" alt="" /></span>
+					<span class="coin coin_5 mobile"><img src="./assets/coin-5.png" alt="" /></span>
+				</div>
+			</div>
+		</section>
+		<section class="formulario">
+			<div class="formulario__container">
+				<h3 class="formulario__title">Para enviar, preencha todos os campos:</h3>
+				<form action="" class="form">
+					<div class="form__holder">
+						<label class="form__input" for="nome"><input type="text" id="nome" placeholder="Nome" /></label>
+						<label class="form__input" for="dados"><input type="text" id="dados" placeholder="CPF/CNPJ" /></label>
+						<label class="form__input" for="email"><input type="email" id="email" placeholder="E-mail" /></label>
+						<label class="form__input" for="loteamento">
+							<select name="" id="loteamento">
+								<option value="">Loteamento adquirido por você</option>
+							</select>
+						</label>
+						<label class="form__input" for="amigo"><input type="text" id="amigo" placeholder="Nome do amigo indicado" /></label>
+						<label class="form__input" for="telefone"><input type="text" id="telefone" placeholder="Telefone do amigo indicado" /></label>
+						<label class="form__input" for="email-amigo"><input type="text" id="email-amigo" placeholder="E-mail do amigo indicado" /></label>
+						<label class="form__input" for=""
+							><select name="" id="">
+								<option value="">Indique o loteamento do amigo</option>
+							</select>
+						</label>
+					</div>
+					<div class="form__terms">
+						<input type="checkbox" name="" id="checkbox" required />
+						<p class="form__terms--text">
+							Li e estou de acordo com o <a href="#">regulamento</a>. Estou de acordo também com as formas de tratamento de dados realizados pela marca MRV&CO,
+							conforme sua <a href="#">Política de Privacidade</a>.
+						</p>
+					</div>
+					<button type="submit" class="button button--form">ENVIAR →</button>
+				</form>
+			</div>
+		</section>
+		<section class="box">
+			<div class="box__container">
+				<h3 class="box__title">Siga este passo a passo</h3>
+				<p class="box__desc">e, quando o seu amigo(a) comprar um lote com a Urba, você receberá <b>sua premiação em dinheiro</b></p>
+				<div class="box__holder">
+					<div class="box__card">
+						<img src="./assets/icon1.svg" alt="" />
+						<p class="box__card--desc">Você que é cliente Urba, indique um amigo para ser o seu vizinho premiado</p>
+					</div>
+					<div class="box__card">
+						<img src="./assets/icon2.svg" alt="" />
+						<p class="box__card--desc">Aguarde o e-mail de confirmação da indicação</p>
+					</div>
+					<div class="box__card">
+						<img src="./assets/icon3.svg" alt="" />
+						<p class="box__card--desc">Seu amigo fecha negócio com a Urba</p>
+					</div>
+					<div class="box__card">
+						<img src="./assets/icon4.svg" alt="" />
+						<p class="box__card--desc">Você ganha um <br /><b>SUPER PRÊMIO!</b></p>
+					</div>
+				</div>
+				<p class="box__smaller">
+					*A premiação é válida para clientes adimplentes, cuja indicação é feita antes da data de venda, com os mesmos dados do indicado vinculados ao futuro
+					cliente comprador.
+					<br /><br />
+					A previsão de pagamento do prêmio é de 120 dias. Confira o regulamento.
+				</p>
+			</div>
+		</section>
+
+		<section class="duvidas">
+			<div class="duvidas__container">
+				<h3 class="duvidas__title">Você ainda tem dúvidas sobre o Programa Vizinho Premiado?</h3>
+				<p class="duvidas__desc">
+					Envie um e-mail pra gente: <b>vizinhopremiado@vivaurba.com.br</b> <br />Explique sua dúvida e vamos responder o mais breve possível.
+				</p>
+				<div class="button--container"><a href="#" class="button button--form size">QUERO GANHAR PRÊMIOS EM $ →</a></div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div><img src="./assets/LOGO.svg" alt="" /></div>
+		<div><img src="./assets/mrv.png" alt="" /></div>
+	</footer>
+
+	<include src="./html/footer.html"></include>
+</body>
