@@ -187,6 +187,7 @@
 		.coin {
 			position: absolute;
 			z-index: 10;
+			display: none;
 			&_1 {
 				top: 33px;
 				left: -36px;
